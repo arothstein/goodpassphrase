@@ -1,0 +1,28 @@
+{
+  "name": "goodpassphrase-quasar",
+  "version": "0.0.1",
+  "description": "For generating passphrases based on diceware approach.",
+  "productName": "Good Passphrase",
+  "cordovaId": "com.wunita.goodpassphrase",
+  "capacitorId": "",
+  "author": "Aaron Rothstein <aaron.rothstein@wunita.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "quasar": "^1.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.0.0"
+  },
+  "engines": {
+    "node": ">= 10.18.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}
