@@ -70,16 +70,18 @@
 </template>
 
 <script>
+import words from "../statics/words";
+
 export default {
   data() {
     return {
       showResults: true,
 
       ppOptions: {
-        wordCount: "6",
+        wordCount: 6,
         addInt: true,
         addSpecial: false,
-        ppCount: "3"
+        ppCount: 3
       },
 
       ppResults: {
@@ -91,10 +93,10 @@ export default {
   computed: {
     disableReset: function() {
       if (
-        this.ppOptions.wordCount == "6" &&
+        this.ppOptions.wordCount == 6 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false &&
-        this.ppOptions.ppCount == "3"
+        this.ppOptions.ppCount == 3
       ) {
         return true;
       } else {
@@ -105,145 +107,145 @@ export default {
     avgTimeToGuess: function() {
       // returns static text for calculated average time to guess
       if (
-        this.ppOptions.wordCount == "2" &&
+        this.ppOptions.wordCount == 2 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "0 seconds";
       } else if (
-        this.ppOptions.wordCount == "2" &&
+        this.ppOptions.wordCount == 2 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "0 seconds";
       } else if (
-        this.ppOptions.wordCount == "2" &&
+        this.ppOptions.wordCount == 2 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "0 seconds";
       } else if (
-        this.ppOptions.wordCount == "2" &&
+        this.ppOptions.wordCount == 2 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
         return "0 seconds";
       } else if (
-        this.ppOptions.wordCount == "3" &&
+        this.ppOptions.wordCount == 3 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "20 seconds";
       } else if (
-        this.ppOptions.wordCount == "3" &&
+        this.ppOptions.wordCount == 3 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "23 seconds";
       } else if (
-        this.ppOptions.wordCount == "3" &&
+        this.ppOptions.wordCount == 3 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "47 seconds";
       } else if (
-        this.ppOptions.wordCount == "3" &&
+        this.ppOptions.wordCount == 3 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
         return "8 minutes";
       } else if (
-        this.ppOptions.wordCount == "4" &&
+        this.ppOptions.wordCount == 4 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "5 hours";
       } else if (
-        this.ppOptions.wordCount == "4" &&
+        this.ppOptions.wordCount == 4 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "2 days";
       } else if (
-        this.ppOptions.wordCount == "4" &&
+        this.ppOptions.wordCount == 4 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "4 days";
       } else if (
-        this.ppOptions.wordCount == "4" &&
+        this.ppOptions.wordCount == 4 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
         return "42 days";
       } else if (
-        this.ppOptions.wordCount == "5" &&
+        this.ppOptions.wordCount == 5 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "4.5 years";
       } else if (
-        this.ppOptions.wordCount == "5" &&
+        this.ppOptions.wordCount == 5 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "45 years";
       } else if (
-        this.ppOptions.wordCount == "5" &&
+        this.ppOptions.wordCount == 5 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "90 years";
       } else if (
-        this.ppOptions.wordCount == "5" &&
+        this.ppOptions.wordCount == 5 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
         return "901 years";
       } else if (
-        this.ppOptions.wordCount == "6" &&
+        this.ppOptions.wordCount == 6 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "35,051 years";
       } else if (
-        this.ppOptions.wordCount == "6" &&
+        this.ppOptions.wordCount == 6 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "350,510 years";
       } else if (
-        this.ppOptions.wordCount == "6" &&
+        this.ppOptions.wordCount == 6 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "701,020 years";
       } else if (
-        this.ppOptions.wordCount == "6" &&
+        this.ppOptions.wordCount == 6 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
         return "7,010,208 years";
       } else if (
-        this.ppOptions.wordCount == "7" &&
+        this.ppOptions.wordCount == 7 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
         return "272,556,887 years";
       } else if (
-        this.ppOptions.wordCount == "7" &&
+        this.ppOptions.wordCount == 7 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false
       ) {
         return "2,725,568,873 years";
       } else if (
-        this.ppOptions.wordCount == "7" &&
+        this.ppOptions.wordCount == 7 &&
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == true
       ) {
         return "5,451,137,747 years";
       } else if (
-        this.ppOptions.wordCount == "7" &&
+        this.ppOptions.wordCount == 7 &&
         this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == true
       ) {
@@ -254,17 +256,73 @@ export default {
 
   methods: {
     getPassphrases() {
-      console.log("getPassphrases fired");
       localStorage.setItem("ppOptions", JSON.stringify(this.ppOptions));
+      var passPhrases = [];
+      var i;
+      var pp = "";
+      for (i = 0; i < this.ppOptions.ppCount; i++) {
+        pp = this.generatePassphrase(
+          this.ppOptions.wordCount,
+          this.ppOptions.addInt,
+          this.ppOptions.addSpecial
+        );
+        passPhrases.push(pp);
+      }
+    },
+
+    generatePassphrase(wordCount, addInt, addSpecial) {
+      var passPhrase = this.getWords(wordCount);
+
+      if (addInt) {
+        var randomNum = new Uint32Array(1);
+        window.crypto.getRandomValues(randomNum);
+        passPhrase += randomNum[0] % 10;
+      }
+
+      if (addSpecial) {
+        var specials = "@#$%^&*-_!+=[]{}|\\:',.?/`~\"();"; // 30 special characters, based of Azure AD allowed characters
+        var randomNum = new Uint32Array(1);
+        window.crypto.getRandomValues(randomNum);
+        passPhrase += specials.charAt(randomNum[0] % 30);
+      }
+
+      console.log(passPhrase);
+    },
+
+    getWords(wordCount) {
+      var wordList = "";
+      var i;
+      var n;
+      var word = "";
+      for (i = 0; i < wordCount; i++) {
+        n = this.rollWordNumber(5);
+        word = words[n].charAt(0).toUpperCase() + words[n].slice(1); // Capitalizes first letter
+        wordList += word;
+      }
+      return wordList;
+    },
+
+    rollWordNumber() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
+      var wordNumber = "";
+      var i;
+      var randomNum = new Uint32Array(1);
+      var dieRoll;
+      for (i = 0; i < 5; i++) {
+        window.crypto.getRandomValues(randomNum);
+        dieRoll = (randomNum[0] % 6) + 1;
+        wordNumber += dieRoll;
+      }
+      return wordNumber;
     },
 
     resetPpOptions() {
       // Resets selected passphrase options back to defaults, deletes localStorage item
       localStorage.removeItem("ppOptions");
-      this.ppOptions.wordCount = "6";
+      this.ppOptions.wordCount = 6;
       this.ppOptions.addInt = false;
       this.ppOptions.addSpecial = false;
-      this.ppOptions.ppCount = "3";
+      this.ppOptions.ppCount = 3;
     }
   },
 
