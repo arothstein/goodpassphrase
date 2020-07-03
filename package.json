@@ -8,6 +8,7 @@
   "author": "Aaron Rothstein <aaron.rothstein@wunita.com>",
   "private": true,
   "scripts": {
+    "build": "quasar build",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
