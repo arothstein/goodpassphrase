@@ -60,9 +60,16 @@
       </q-card>
     </div>
     <div class="col">
-      <q-card v-if="showResults">
+      <q-card v-if="ppResults.Passphrases.length > 0">
         <q-card-section class="bg-primary text-white">
           <div class="text-h6">Passphrases</div>
+        </q-card-section>
+        <q-card-section>
+          <q-list>
+            <q-item v-for="pp in ppResults.Passphrases" v-bind:key="pp">
+              <span>{{ pp }}</span>
+            </q-item>
+          </q-list>
         </q-card-section>
       </q-card>
     </div>
@@ -75,8 +82,6 @@ import words from "../statics/words";
 export default {
   data() {
     return {
-      showResults: true,
-
       ppOptions: {
         wordCount: 6,
         addInt: true,
@@ -103,7 +108,18 @@ export default {
         return false;
       }
     },
-
+    /*
+    ppFontSize: function() {
+      if ($breakpoint - sm - max && this.ppOptions.wordCount == "7") {
+        return "font-size: 8pt";
+      } else if (
+        $breakpoint - xs - max &&
+        (this.ppOptions.wordCount == "5" || this.ppOptions.wordCount == "6")
+      ) {
+        return "font-size: 8pt";
+      }
+    },
+*/
     avgTimeToGuess: function() {
       // returns static text for calculated average time to guess
       if (
@@ -257,7 +273,7 @@ export default {
   methods: {
     getPassphrases() {
       localStorage.setItem("ppOptions", JSON.stringify(this.ppOptions));
-      var passPhrases = [];
+      this.ppResults.Passphrases = [];
       var i;
       var pp = "";
       for (i = 0; i < this.ppOptions.ppCount; i++) {
@@ -266,7 +282,7 @@ export default {
           this.ppOptions.addInt,
           this.ppOptions.addSpecial
         );
-        passPhrases.push(pp);
+        this.ppResults.Passphrases.push(pp);
       }
     },
 
@@ -286,7 +302,7 @@ export default {
         passPhrase += specials.charAt(randomNum[0] % 30);
       }
 
-      console.log(passPhrase);
+      return passPhrase;
     },
 
     getWords(wordCount) {
@@ -333,3 +349,6 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+</style>
