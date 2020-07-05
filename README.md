@@ -1,4 +1,4 @@
-# Good Passphrase (goodpassphrase-quasar)
+# Good Passphrase
 
 For generating passphrases based on diceware approach.
 
