@@ -151,7 +151,7 @@ export default {
         this.ppOptions.addInt == false &&
         this.ppOptions.addSpecial == false
       ) {
-        return "20 seconds";
+        return "2 seconds";
       } else if (
         this.ppOptions.wordCount == 3 &&
         this.ppOptions.addInt == true &&
