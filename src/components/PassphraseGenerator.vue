@@ -1,6 +1,6 @@
 <template>
   <div class="row q-gutter-sm">
-    <div class="col-12 col-md-4">
+    <div class="col-4">
       <q-card>
         <q-card-section class="bg-primary text-white">
           <div class="text-h6">Passphrase options</div>
@@ -59,8 +59,8 @@
         </q-card-actions>
       </q-card>
     </div>
-    <div class="col">
-      <q-card v-if="ppResults.Passphrases.length > 0">
+    <div class="col-7">
+      <q-card>
         <q-card-section class="bg-primary text-white">
           <div class="text-h6">Passphrases</div>
         </q-card-section>
@@ -98,10 +98,10 @@ export default {
   computed: {
     disableReset: function() {
       if (
-        this.ppOptions.wordCount == 6 &&
-        this.ppOptions.addInt == false &&
+        this.ppOptions.wordCount == 5 &&
+        this.ppOptions.addInt == true &&
         this.ppOptions.addSpecial == false &&
-        this.ppOptions.ppCount == 3
+        this.ppOptions.ppCount == 5
       ) {
         return true;
       } else {
@@ -335,10 +335,10 @@ export default {
     resetPpOptions() {
       // Resets selected passphrase options back to defaults, deletes localStorage item
       localStorage.removeItem("ppOptions");
-      this.ppOptions.wordCount = 6;
-      this.ppOptions.addInt = false;
+      this.ppOptions.wordCount = 5;
+      this.ppOptions.addInt = true;
       this.ppOptions.addSpecial = false;
-      this.ppOptions.ppCount = 3;
+      this.ppOptions.ppCount = 5;
     }
   },
 
