@@ -1,6 +1,6 @@
 <template>
   <div class="row q-gutter-sm">
-    <div class="col-4">
+    <div class="col-12 col-md-4">
       <q-card>
         <q-card-section class="bg-primary text-white">
           <div class="text-h6">Passphrase options</div>
@@ -59,7 +59,7 @@
         </q-card-actions>
       </q-card>
     </div>
-    <div class="col-7">
+    <div class="col">
       <q-card>
         <q-card-section class="bg-primary text-white">
           <div class="text-h6">Passphrases</div>
