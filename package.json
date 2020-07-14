@@ -1,7 +1,7 @@
 {
   "name": "goodpassphrase-quasar",
   "version": "0.0.1",
-  "description": "For generating passphrases based on diceware approach.",
+  "description": "For generating passphrases using diceware method.",
   "productName": "GoodPassphrase.com",
   "cordovaId": "com.wunita.goodpassphrase",
   "capacitorId": "",
