@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h1 class="text-h3">About</h1>
-          <p>My name is Aaron and I find coding fun. I work in IT, and I had never found a password/passphrase generator I absolutely fell in love with, so I wrote my own and made it mobile friendly.</p>
+          <p>My name is Aaron and I code for fun. I work in IT, and have never found a password/passphrase generator I absolutely fell in love with, so I wrote my own.</p>
         <h1 class="text-h3">What is Diceware?</h1>
         <p>Diceware is a method of creating random passphrases using "dice" as the random number generator. GoodPassphrase.com has implemented a digital die to make really fast rolls for you.</p>
         <p>Here are some more detailed write-ups on Diceware. Short story: Diceware can generate really strong passphrases that are really hard to guess, even if the guesser knows you used the Diceware method.</p>
