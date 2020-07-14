@@ -12,6 +12,7 @@
         />
 
         <q-toolbar-title>GoodPassphrase.com</q-toolbar-title>
+        <q-btn flat round dense icon="fab fa-github" @click="gotoGitHub"/>
       </q-toolbar>
     </q-header>
 
@@ -26,6 +27,8 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
   name: "MainLayout",
 
@@ -37,6 +40,12 @@ export default {
     return {
       leftDrawerOpen: false
     };
+  },
+
+  methods: {
+    gotoGitHub() {
+      openURL("https://github.com/arothstein/goodpassphrase");
+  }
   }
 };
 </script>
