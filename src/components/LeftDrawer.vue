@@ -1,7 +1,7 @@
 <template>
   <q-list>
     <q-list padding class="menu-list">
-      <q-item clickable v-ripple to="/">
+      <q-item clickable v-ripple to="/" exact>
         <q-item-section>GoodPassphrase.com</q-item-section>
       </q-item>
       <q-item clickable v-ripple to="/about">
