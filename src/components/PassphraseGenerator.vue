@@ -83,10 +83,10 @@ export default {
   data() {
     return {
       ppOptions: {
-        wordCount: 6,
+        wordCount: 5,
         addInt: true,
         addSpecial: false,
-        ppCount: 3
+        ppCount: 5
       },
 
       ppResults: {
