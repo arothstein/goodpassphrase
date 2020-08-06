@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import words from "../statics/words";
+import words from "../../public/words";
 
 export default {
   data() {
