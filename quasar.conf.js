@@ -6,6 +6,9 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
+const paths = [{ path: "/" }, { path: "/about" }, { path: "/privacy" }];
+
 module.exports = function(/* ctx */) {
   return {
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
@@ -59,7 +62,17 @@ module.exports = function(/* ctx */) {
       // extractCSS: false,
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
-      extendWebpack(cfg) {}
+      extendWebpack(cfg) {
+        cfg.plugins.push(
+          new SitemapPlugin("https://goodpassphrase.com", paths, {
+            filename: "sitemap.xml",
+            // the following are the defaults for all paths. You can set them separately or per path in the paths array
+            lastmod: true,
+            changefreq: "weekly",
+            priority: "0.8"
+          })
+        );
+      }
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer

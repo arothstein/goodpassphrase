@@ -16,7 +16,8 @@
     "quasar": "^1.0.0"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0"
+    "@quasar/app": "^1.0.0",
+    "sitemap-webpack-plugin": "^0.8.1"
   },
   "engines": {
     "node": ">= 10.18.1",
