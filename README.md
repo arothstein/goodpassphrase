@@ -1,3 +1,5 @@
+
+
 # Good Passphrase
 
 For generating passphrases based on the Diceware method.
@@ -13,6 +15,7 @@ npm install
 ```bash
 quasar dev
 ```
+The development server is configured to run on port `8080` and will open automatically in your browser.
 
 ### Build the app for production
 
